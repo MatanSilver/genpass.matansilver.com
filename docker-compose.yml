@@ -1,9 +1,9 @@
 ---
 version: "2.1"
 services:
-        jellyfin:
-                build: .
-                container_name: genpass
-                ports:
-                        - 5000:5000
-                restart: unless-stopped
+  genpass:
+    build: .
+    container_name: genpass
+    ports:
+      - 5000:5000
+    restart: unless-stopped
