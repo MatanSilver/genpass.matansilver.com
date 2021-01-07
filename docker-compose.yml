@@ -1,9 +1,23 @@
 ---
-version: "2.1"
+version: "3"
 services:
   genpass:
     build: .
     container_name: genpass
     ports:
-      - 5000:5000
+      - 5001:5000
+    networks:
+      - discovery
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.genpass.rule=Host(`genpass.matansilver.com`)"
+      - "traefik.http.routers.genpass.entrypoints=web-secure"
+      - "traefik.docker.network=discovery"
+      - "traefik.http.routers.genpass.tls.certresolver=le"
+      - "traefik.http.services.genpass.loadbalancer.server.port=5000"
     restart: unless-stopped
+
+networks:
+  discovery:
+    external: true
+
