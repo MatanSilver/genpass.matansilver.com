@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8af80cb9-ab04-45bb-b301-c1928280be49/deploy-status)](https://app.netlify.com/sites/objective-neumann-a751e3/deploys)
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
